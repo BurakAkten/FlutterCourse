@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_course/animals.dart';
 import 'package:flutter_course/my_home_page.dart';
 import 'package:flutter_course/second_page.dart';
 import 'package:flutter_course/third_page.dart';
@@ -12,6 +13,7 @@ class NavigationUtil {
   static const String secondScreen = "secondScreen";
   static const String thirdScreen = "thirdScreen";
   static const String randAnimalScreen = "randAnimalScreen";
+  static const String animalsScreen = "animalsScreen";
 
   static navigateToBack(context, {dynamic value}) => Navigator.pop(context, value);
 
@@ -24,6 +26,7 @@ class NavigationUtil {
   static navigateToSecondScreen(context, {Object? arguments}) => _navigateToPage(context, secondScreen, arguments: arguments);
   static navigateToThirdScreen(context, {Object? arguments}) => _navigateToPage(context, thirdScreen, arguments: arguments);
   static navigateToRandAnimalScreen(context, {Object? arguments}) => _navigateToPage(context, randAnimalScreen, arguments: arguments);
+  static navigateToAnimalsScreen(context, {Object? arguments}) => _navigateToPage(context, animalsScreen, arguments: arguments);
 
   static Route onGenerateRoute(settings) => MaterialPageRoute(builder: (context) => _buildNavigationMap(context, settings));
 
@@ -38,6 +41,9 @@ class NavigationUtil {
         break;
       case randAnimalScreen:
         page = RandScreen();
+        break;
+      case animalsScreen:
+        page = AnimalsScreen();
         break;
     }
     return page;

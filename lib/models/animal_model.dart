@@ -66,4 +66,8 @@ class Animal {
     data['id'] = this.id;
     return data;
   }
+
+  List<Animal> listFromJson(List<dynamic>? json) {
+    return json == null ? <Animal>[] : json.map((value) => Animal.fromJson(value)).toList();
+  }
 }

@@ -103,7 +103,8 @@ class MyHomePage extends StatelessWidget {
           // );
 
           //Advanced
-          NavigationUtil.navigateToRandAnimalScreen(context);
+          // NavigationUtil.navigateToRandAnimalScreen(context);
+          NavigationUtil.navigateToAnimalsScreen(context);
         },
         child: Container(
           width: MediaQuery.of(context).size.width / 3,
