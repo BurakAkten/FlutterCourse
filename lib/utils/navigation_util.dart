@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_course/animals.dart';
-import 'package:flutter_course/my_home_page.dart';
-import 'package:flutter_course/second_page.dart';
-import 'package:flutter_course/third_page.dart';
+import 'package:flutter_course/screens/animals.dart';
+import 'package:flutter_course/screens/my_home_page.dart';
+import 'package:flutter_course/screens/second_page.dart';
+import 'package:flutter_course/screens/third_page.dart';
 
-import '../rand_animal.dart';
+import '../screens/animation_practice_screen.dart';
+import '../screens/hero_page.dart';
+import '../screens/rand_animal.dart';
 
 class NavigationUtil {
   static final navigatorKey = GlobalKey<NavigatorState>();
@@ -14,6 +16,8 @@ class NavigationUtil {
   static const String thirdScreen = "thirdScreen";
   static const String randAnimalScreen = "randAnimalScreen";
   static const String animalsScreen = "animalsScreen";
+  static const String animationScreen = "animationScreen";
+  static const String heroPage = "heroPage";
 
   static navigateToBack(context, {dynamic value}) => Navigator.pop(context, value);
 
@@ -27,6 +31,8 @@ class NavigationUtil {
   static navigateToThirdScreen(context, {Object? arguments}) => _navigateToPage(context, thirdScreen, arguments: arguments);
   static navigateToRandAnimalScreen(context, {Object? arguments}) => _navigateToPage(context, randAnimalScreen, arguments: arguments);
   static navigateToAnimalsScreen(context, {Object? arguments}) => _navigateToPage(context, animalsScreen, arguments: arguments);
+  static navigateToAnimationsScreen(context, {Object? arguments}) => _navigateToPage(context, animationScreen, arguments: arguments);
+  static navigateToHeroScreen(context, {Object? arguments}) => _navigateToPage(context, heroPage, arguments: arguments);
 
   static Route onGenerateRoute(settings) => MaterialPageRoute(builder: (context) => _buildNavigationMap(context, settings));
 
@@ -44,6 +50,12 @@ class NavigationUtil {
         break;
       case animalsScreen:
         page = AnimalsScreen();
+        break;
+      case animationScreen:
+        page = AnimationPracticeScreen();
+        break;
+      case heroPage:
+        page = HeroPage();
         break;
     }
     return page;

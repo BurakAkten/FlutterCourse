@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_course/second_page.dart';
-import 'package:flutter_course/third_page.dart';
+import 'package:flutter_course/screens/second_page.dart';
+import 'package:flutter_course/screens/third_page.dart';
 import 'package:flutter_course/utils/navigation_util.dart';
 
 class MyHomePage extends StatelessWidget {

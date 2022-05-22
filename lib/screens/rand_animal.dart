@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_course/base/services/base_service.dart';
 import 'package:flutter_course/widgets/animal_widget.dart';
 
-import 'models/animal_model.dart';
+import '../models/animal_model.dart';
 
 class RandScreen extends StatefulWidget {
   @override
@@ -53,6 +53,4 @@ class _RandScreenState extends State<RandScreen> {
       ),
     );
   }
-
-
 }
