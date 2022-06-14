@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_course/screens/hw1/hw1_home_screen.dart';
 import 'package:flutter_course/utils/navigation_util.dart';
-import 'screens/my_home_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,8 +16,9 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
         iconTheme: IconThemeData(color: Colors.blue),
+        // appBarTheme: AppBarTheme(backgroundColor: Colors.white),
       ),
-      home: const MyHomePage(title: 'Flutter Course Home Page'),
+      home: Hw1HomeScreen(),
       onGenerateRoute: NavigationUtil.onGenerateRoute,
       navigatorKey: NavigationUtil.navigatorKey,
     );
